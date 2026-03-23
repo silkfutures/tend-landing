@@ -467,7 +467,7 @@ footer {
     </svg>
     <span class="nav-word">tend</span>
   </a>
-  <a class="nav-cta" href="#waitlist">Join the waitlist</a>
+  <a class="nav-cta" href="#access">Get early access</a>
 </nav>
 
 <!-- HERO -->
@@ -482,12 +482,11 @@ footer {
     Tend gives youth mentors AI-powered session prep, a clear view of each young person's journey, and impact reports that write themselves — so you can focus on what only you can do.
   </p>
 
-  <div class="hero-form" id="hero-form">
-    <input class="email-input" type="email" placeholder="Your work email" id="hero-email">
-    <button class="join-btn" onclick="joinWaitlist('hero')">Join the waitlist →</button>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;opacity:0;animation:up 0.7s ease 0.5s forwards">
+    <a class="join-btn" href="https://calendly.com/tendmentorapp/demo" target="_blank" style="text-decoration:none">Book a 20 min call →</a>
+    <a class="btn-ghost" href="mailto:hello@tendmentorapp.com" style="display:inline-flex;align-items:center;padding:14px 24px;border:1.5px solid var(--border);border-radius:12px;font-size:15px;font-weight:400;color:var(--mid);text-decoration:none;font-family:Outfit,sans-serif;transition:all 0.2s">or email us</a>
   </div>
-  <div class="success-msg" id="hero-success">You're on the list. We'll be in touch soon.</div>
-  <p class="hero-note">Free to join · No credit card · Built in Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿</p>
+  <p class="hero-note" style="opacity:0;animation:up 0.6s ease 0.65s forwards">No pitch · Just a conversation · Built in Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿</p>
 
   <!-- App preview -->
   <div class="hero-preview">
@@ -693,20 +692,17 @@ footer {
 </section>
 
 <!-- CTA -->
-<section class="cta-section" id="waitlist">
+<section class="cta-section" id="access">
   <div class="section-inner" style="text-align:center;position:relative">
     <span class="eyebrow" style="color:var(--growth)">Early access</span>
     <h2 class="cta-title">Be first to <em>tend</em></h2>
     <p class="cta-sub">We're onboarding a small group of mentors and organisations to shape the product. Join the list — no commitment, just early access.</p>
 
-    <div class="cta-form" id="cta-form">
-      <input class="email-input-dark" type="email" placeholder="Your work email" id="cta-email">
-      <button class="join-btn-light" onclick="joinWaitlist('cta')">Join the waitlist →</button>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="https://calendly.com/tendmentorapp/demo" target="_blank" class="join-btn-light" style="text-decoration:none;display:inline-block">Book a 20 min call →</a>
+      <a href="mailto:hello@tendmentorapp.com" style="display:inline-flex;align-items:center;padding:14px 24px;border:1.5px solid rgba(255,255,255,0.15);border-radius:12px;font-size:15px;font-weight:400;color:rgba(255,255,255,0.55);text-decoration:none;font-family:Outfit,sans-serif;letter-spacing:0.04em;transition:all 0.2s">or email us</a>
     </div>
-    <div class="success-msg" id="cta-success" style="background:rgba(107,175,124,0.12);border-color:rgba(107,175,124,0.25);color:var(--growth);max-width:500px;margin:0 auto">
-      You're on the list. We'll reach out personally — this is a small list by design.
-    </div>
-    <p class="cta-note">No credit card · UK-based · GDPR compliant · Built by people who've been in the room</p>
+    <p class="cta-note">No pitch · UK-based · GDPR compliant · Built by people who've been in the room</p>
   </div>
 </section>
 
@@ -722,12 +718,12 @@ footer {
   </div>
   <span class="footer-note">© 2026 Tend · Made in Cardiff, Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>
   <div class="footer-links">
-    <a href="mailto:hello@tend.co.uk">hello@tend.co.uk</a>
+    <a href="/cdn-cgi/l/email-protection#7d15181111123d09181319531e12530816"><span class="__cf_email__" data-cfemail="761e131a1a19360213181258151958031d">[email&#160;protected]</span></a>
     <a href="#">Privacy</a>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Waitlist form
 function joinWaitlist(source) {
   const emailEl = document.getElementById(source === 'hero' ? 'hero-email' : 'cta-email');
@@ -763,14 +759,4 @@ function joinWaitlist(source) {
 const observer = new IntersectionObserver(entries => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
-
-</body>
-</html>
+      setTime
